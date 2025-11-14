@@ -14,6 +14,6 @@ const mcp = new MCPClient({
 export const mcpAgent = new Agent({
   name: "mcp-agent",
   instructions: "You can answer weather questions using the weather tool.",
-  model: "openai/gpt-4.1",
+  model: "openai/gpt-4o",
   tools: await mcp.listTools()
 });

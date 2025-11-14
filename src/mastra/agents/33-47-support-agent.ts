@@ -23,7 +23,7 @@ export const supportAgent = new Agent({
   },
   model: ({ requestContext }) => {
     const userTier = requestContext.get("user-tier");
-    return userTier === "enterprise" ? "openai/gpt-4.1." : "openai/gpt-3.5-turbo";
+    return userTier === "enterprise" ? "openai/gpt-4o" : "openai/gpt-3.5-turbo";
   },
   tools: ({ requestContext }) => {
     const userTier = requestContext.get("user-tier");

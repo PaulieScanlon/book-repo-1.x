@@ -9,11 +9,11 @@ import {
 export const ContentWriterAgent = new Agent({
   name: "context-writer-agent",
   instructions: "You are a content writer that creates accurate summaries.",
-  model: "openai/gpt-4.1",
+  model: "openai/gpt-4o",
   scorers: {
     faithfulness: {
       // Checks accuracy of output
-      scorer: createFaithfulnessScorer({ model: "openai/gpt-4.1-nano" })
+      scorer: createFaithfulnessScorer({ model: "openai/gpt-4o-mini" })
     },
     similarity: {
       // Checks similarity of source and output
@@ -23,7 +23,7 @@ export const ContentWriterAgent = new Agent({
     },
     hallucination: {
       // Checks for contradictions between source and output
-      scorer: createHallucinationScorer({ model: "openai/gpt-4.1-nano" })
+      scorer: createHallucinationScorer({ model: "openai/gpt-4o-mini" })
     }
   }
 });

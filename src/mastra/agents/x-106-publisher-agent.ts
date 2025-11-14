@@ -7,6 +7,6 @@ export const publisherAgent = new Agent({
   name: "publisherAgent",
   instructions: `You are a publisher agent that coordinates content creation.
   First call the copywriter for initial content, then the editor for refinement.`,
-  model: "openai/gpt-4.1",
+  model: "openai/gpt-4o",
   tools: { copywriterTool, editorTool }
 });

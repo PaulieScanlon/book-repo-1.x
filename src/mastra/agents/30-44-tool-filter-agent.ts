@@ -5,7 +5,7 @@ import { TokenLimiter, ToolCallFilter } from "@mastra/memory/processors";
 export const toolFilterAGent = new Agent({
   name: "tool-filter-agent",
   instructions: "Instructions for agent.",
-  model: "openai/gpt-4.1",
+  model: "openai/gpt-4o",
   memory: new Memory({
     processors: [
       // Example 1: Remove all tool calls/results.
